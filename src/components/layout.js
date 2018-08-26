@@ -1,4 +1,5 @@
 import React from 'react'
+import config from '../../data/SiteConfig.js'
 import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
@@ -26,7 +27,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {config.siteTitle}
           </Link>
         </h1>
       )
@@ -47,7 +48,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {config.siteTitle}
           </Link>
         </h3>
       )

@@ -1,10 +1,11 @@
 import React from 'react'
+import urljoin from 'urljoin'
+import config from '../../data/SiteConfig'
 
 // Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {
@@ -17,8 +18,8 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={profilePic}
-          alt={`Kyle Mathews`}
+          src={config.userAvatar}
+          alt={config.userName}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -27,11 +28,14 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>Kyle Mathews</strong> who lives and works in San
-          Francisco building useful things.{' '}
-          <a href="https://twitter.com/kylemathews">
-            You should follow him on Twitter
-          </a>
+          {config.userName} lives in {config.userLocation}. You should follow{' '}
+          {config.userPronouns[1]} on Twitter at{' '}
+          <a
+            href={urljoin('https://twitter.com/', config.userTwitter)}
+            target="_blank"
+          >
+            {config.userTwitter}
+          </a>.
         </p>
       </div>
     )
