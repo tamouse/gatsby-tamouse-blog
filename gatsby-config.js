@@ -1,17 +1,21 @@
+const config = require('./data/SiteConfig.js')
+const path = require('path')
+const urljoin = require('urljoin')
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: config.siteTitle,
+    author: config.userName,
+    description: config.siteDescription,
+    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: config.pathPrefix,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
         name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
     },
     {
@@ -48,8 +52,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
