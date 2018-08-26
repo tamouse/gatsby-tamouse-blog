@@ -37,6 +37,18 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-remark-component',
+          'gatsby-remark-attr',
+          {
+            resolve: 'gatsby-remark-custom-blocks',
+            options: {
+              blocks: {
+                verse: {
+                  classes: ['verse'],
+                },
+              },
+            },
+          },
         ],
       },
     },

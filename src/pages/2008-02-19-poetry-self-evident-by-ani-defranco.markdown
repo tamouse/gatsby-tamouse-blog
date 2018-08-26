@@ -1,10 +1,15 @@
 ---
 title: "Poetry: Self Evident, by Ani DeFranco"
 date: 2008-02-24 13:50:17
+categories:
+  - poetry
+tags:
+  - poetry
+  - Ani DiFranco
 ---
 A poem by Ani DiFranco, inspired by the events of 9/11.
 
-<div class="verse">
+<span class="verse">
 yes,
 us people are just poems
 we're 90% metaphor
@@ -31,9 +36,9 @@ fell to its knees
 after strutting around for a century
 without saying thank you
 or please
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 and the shock was subsonic
 and the smoke was deafening
 between the setup and the punch line
@@ -43,9 +48,9 @@ and then while the fires were raging
 we all climbed up on the window sill
 and then we all held hands
 and jumped into the sky
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 and every borough looked up when it heard the first blast
 and then every dumb action movie was summarily surpassed
 and the exodus uptown by foot and motorcar
@@ -79,34 +84,34 @@ like never before
 as all over the country
 folks just shake their heads
 and pour
-</div>
+</span>
 
 
-<div class="verse">
+<span class="verse">
 so here's a toast to all the folks that live in palestine, afghanistan,
 iraq, el salvador
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 here's a toast to the folks living on the pine ridge reservation
 under the stone cold gaze of mt. rushmore
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 here's a toast to all those nurses and doctors
 who daily provide women with a choice
 who stand down a threat the size of oklahoma city
 just to listen to a young woman's voice
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 here's a toast to all the folks on death row right now
 awaiting the executioner's guillotine
 who are shackled there with dread and can only escape into their heads
 to find peace in the form of a dream, peace in the form of a dream
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 cuz take away our playstations
 and we are a third world nation
 under the thumb of some blue blood royal son
@@ -116,9 +121,9 @@ it don't take a weatherman
 to look around and see the weather
 jeb said he'd deliver florida, folks
 and boy did he ever
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 and we hold these truths to be self evident:
 #1 george w. bush is not president
 #2 america is not a true democracy
@@ -127,9 +132,9 @@ cuz i am a poem heeding hyper-distillation
 i've got no room for a lie so verbose
 i'm looking out over my whole human family
 and i'm raising my glass in a toast
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 here's to our last drink of fossil fuels
 may we vow to get off of this sauce
 shoo away the swarms of commuter planes
@@ -148,10 +153,10 @@ i dream of waiting on the tall blonde wooden benches
 in a grand station aglow with grace
 and then standing out on the platform
 and feeling the air on my face
-</div>
+</span>
 
 
-<div class="verse">
+<span class="verse">
 give back the night its distant whistle
 give the darkness back its soul
 give the big oil companies the finger finally
@@ -164,9 +169,9 @@ of someone else's desert
 put it back in its pants
 and quit the hypocritical chants of
 freedom forever
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 cuz when one lone phone rang
 in two thousand and one
 at ten after nine
@@ -178,9 +183,9 @@ down the long stairs
 in a building so tall
 that the whole world turned
 just to watch it fall
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 and while we're at it
 remember the first time around?
 the bomb?
@@ -188,15 +193,15 @@ the ryder truck?
 the parking garage?
 the princess that didn't even feel the pea?
 remember joking around in our apartment on avenue D?
-</div>
+</span>
 
-<div class="verse">
+<span class="verse">
 can you imagine how many paper coffee cups would have to change their design
 following a fantastical reversal of the new york skyline?!
-</div>
+</span>
 
 
-<div class="verse">
+<span class="verse">
 it was a joke
 at the time
 and that was just a few years ago
@@ -231,4 +236,4 @@ to make sure they didn't die in vain
 sshhhhhh....
 baby listen
 hear the train?
-</div>
+</span>

@@ -1,4 +1,5 @@
 import React from 'react'
+import rehypeReact from 'rehype-react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
@@ -8,6 +9,11 @@ import PrevNextNav from '../components/PrevNextNav'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import '../assets/extra.css'
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: {},
+}).Compiler
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -33,9 +39,9 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.date} &bull; Time to read: {post.timeToRead} minutes
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div>{renderAst(post.htmlAst)}</div>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -61,10 +67,13 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
-      html
+      htmlAst
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
+        categories
       }
     }
   }
