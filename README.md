@@ -1,9 +1,5 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# Tamouse's Blog, Gatsby Edition
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+[gatsby]: https://next.gatsbyjs.org/ "Gatsby v2 Documentation"
 
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
-
-## Running in development
-`gatsby develop`
+Who knows how many versions this blog has seen, really? This one's in [gatsby].
