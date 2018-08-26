@@ -1,68 +1,36 @@
 import React from 'react'
-import config from '../../data/SiteConfig.js'
 import { Link } from 'gatsby'
-
 import { rhythm, scale } from '../utils/typography'
+import SiteHeader from './SiteHeader'
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { location, metadata, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
+    let headerStyle
     if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {config.siteTitle}
-          </Link>
-        </h1>
-      )
+      headerStyle = {
+        ...scale(1.5),
+        marginBottom: rhythm(1.5),
+        marginTop: 0,
+      }
     } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            {config.siteTitle}
-          </Link>
-        </h3>
-      )
+      headerStyle = {
+        fontFamily: 'Montserrat, sans-serif',
+        marginTop: 0,
+        marginBottom: rhythm(-1),
+      }
     }
     return (
       <div
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(32),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        {header}
+        <SiteHeader headerStyle={headerStyle} title={metadata.title} />
         {children}
       </div>
     )
