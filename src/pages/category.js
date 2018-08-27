@@ -1,33 +1,35 @@
 import React from 'react'
 import { kebabCase } from 'lodash'
+import Layout from '../components/layout.js'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 
-const CategoriesPage = ({
-  data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
+const CategoryPage = ({
+  location,
+  data: { allMarkdownRemark: { group }, site: { siteMetadata } },
 }) => (
-  <div>
-    <Helmet title={title} />
+  <Layout location={location} metadata={siteMetadata}>
+    <Helmet title={siteMetadata.title} />
     <div>
       <h1>Categories</h1>
-      <ul>
+      <ul style={{ listStyle: `none` }}>
         {group.map(category => (
           <li key={category.fieldValue}>
-            <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
+            <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
               {category.fieldValue} ({category.totalCount})
             </Link>
           </li>
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
 )
 
-export default CategoriesPage
+export default CategoryPage
 
 export const pageQuery = graphql`
-  query CategoriesQuery {
+  query CategoryQuery {
     site {
       siteMetadata {
         title
@@ -36,8 +38,9 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 2000
       filter: { frontmatter: { published: { ne: false } } }
+      sort: { fields: [frontmatter___category], order: ASC }
     ) {
-      group(field: frontmatter___categories) {
+      group(field: frontmatter___category) {
         fieldValue
         totalCount
       }

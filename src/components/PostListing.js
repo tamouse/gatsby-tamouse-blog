@@ -9,7 +9,7 @@ export default ({ posts }) => (
     {posts.map(({ node }) => {
       const title = get(node, 'frontmatter.title') || node.fields.slug
       const date = get(node, 'frontmatter.date') || ''
-      const categories = get(node, 'frontmatter.categories') || []
+      const category = get(node, 'frontmatter.category') || []
       const tags = get(node, 'frontmatter.tags') || []
       return (
         <div key={node.fields.slug}>
@@ -22,7 +22,7 @@ export default ({ posts }) => (
               {title}
             </Link>
           </h3>
-          <PostMeta date={date} categories={categories} tags={tags} />
+          <PostMeta date={date} category={category} tags={tags} />
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       )

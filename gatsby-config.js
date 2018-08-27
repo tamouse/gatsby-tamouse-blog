@@ -87,5 +87,11 @@ module.exports = {
         templatePath: path.join(__dirname, 'src/templates/tag.js'),
       },
     },
+    {
+      resolve: 'gatsby-plugin-categories',
+      options: {
+        templatePath: path.join(__dirname, 'src/templates/category.js'),
+      },
+    },
   ],
 }

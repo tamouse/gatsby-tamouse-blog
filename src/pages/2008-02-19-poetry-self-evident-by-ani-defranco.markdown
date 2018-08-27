@@ -2,8 +2,7 @@
 title: "Poetry: Self Evident, by Ani DeFranco"
 date: 2008-02-24 13:50:17
 published: true
-categories:
-  - poetry
+category: poetry
 tags:
   - poetry
   - Ani DiFranco

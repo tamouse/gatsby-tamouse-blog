@@ -25,10 +25,7 @@ class BlogPostTemplate extends React.Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
 
-    const categories = get(
-      this.props,
-      'data.markdownRemark.frontmatter.categories'
-    )
+    const category = get(this.props, 'data.markdownRemark.frontmatter.category')
     const tags = get(this.props, 'data.markdownRemark.frontmatter.tags')
 
     return (
@@ -41,7 +38,7 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <PostMeta
           date={post.frontmatter.date}
-          categories={categories}
+          category={category}
           tags={tags}
         />
         <div>{renderAst(post.htmlAst)}</div>
@@ -76,7 +73,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
-        categories
+        category
       }
     }
   }
