@@ -1,0 +1,7 @@
+ul.menuList {
+  list-style: none;
+}
+
+ul.menulist > li {
+  display: inline-block;
+}

@@ -2,11 +2,15 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { rhythm } from '../utils/typography.js'
 import { get } from 'lodash'
+import PostMeta from './PostMeta'
 
 export default ({ posts }) => (
   <React.Fragment>
     {posts.map(({ node }) => {
       const title = get(node, 'frontmatter.title') || node.fields.slug
+      const date = get(node, 'frontmatter.date') || ''
+      const categories = get(node, 'frontmatter.categories') || []
+      const tags = get(node, 'frontmatter.tags') || []
       return (
         <div key={node.fields.slug}>
           <h3
@@ -18,8 +22,8 @@ export default ({ posts }) => (
               {title}
             </Link>
           </h3>
-          <small>{node.frontmatter.date}</small>
-          <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          <PostMeta date={date} categories={categories} tags={tags} />
+          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       )
     })}

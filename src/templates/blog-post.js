@@ -7,6 +7,8 @@ import get from 'lodash/get'
 import Bio from '../components/Bio'
 import PrevNextNav from '../components/PrevNextNav'
 import Layout from '../components/layout'
+import PostMeta from '../components/PostMeta'
+
 import { rhythm, scale } from '../utils/typography'
 import '../assets/extra.css'
 
@@ -23,6 +25,12 @@ class BlogPostTemplate extends React.Component {
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
 
+    const categories = get(
+      this.props,
+      'data.markdownRemark.frontmatter.categories'
+    )
+    const tags = get(this.props, 'data.markdownRemark.frontmatter.tags')
+
     return (
       <Layout location={this.props.location} metadata={siteMetadata}>
         <Helmet
@@ -31,16 +39,11 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date} &bull; Time to read: {post.timeToRead} minutes
-        </p>
+        <PostMeta
+          date={post.frontmatter.date}
+          categories={categories}
+          tags={tags}
+        />
         <div>{renderAst(post.htmlAst)}</div>
         <hr
           style={{

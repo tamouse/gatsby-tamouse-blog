@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import PostListing from '../components/PostListing'
+import PostMeta from '../components/PostMeta'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -52,6 +53,8 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            categories
+            tags
           }
         }
       }

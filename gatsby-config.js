@@ -81,5 +81,11 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: 'gatsby-plugin-tags',
+      options: {
+        templatePath: path.join(__dirname, 'src/templates/tag.js'),
+      },
+    },
   ],
 }

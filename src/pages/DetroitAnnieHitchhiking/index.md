@@ -2,6 +2,13 @@
 layout: post
 title: "Poem: Detroit Annie -- Hitchhiking, by Judy Grain"
 date: 2007-09-17 01:32:31
+categories:
+  - poetry
+tags:
+  - poetry
+  - Ani DiFranco
+  - Judy Grahn
+source: https://example.com
 ---
 *Read by Ani DiFranco on the Carnegie 2002 live album.*
 
